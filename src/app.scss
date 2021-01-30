@@ -5,7 +5,7 @@ padding: 0;
 }
 @import 'partials/_mixin_flip_card.scss';
 @import 'partials/_icon.scss';
-@import 'partials/_mixinDecoration.scss';
+@import 'partials/_mixin_decoration.scss';
 @import 'partials/_animation.scss';
 @import 'partials/_variables.scss';
 
@@ -17,20 +17,21 @@ a {
   @include textDecorationNone;
 }
 
-
 .container {
-  width: 100%;
+  display: flex;
+}
+
+.container_left {
+  width: 50%;
   height: 100vh;
-  background-image: url("../img/foto.jpeg");
-  opacity: 0.9;
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
   position: relative;
+  z-index: 1;
   .title_container {
-    width: 50%;
+    width: 100%;
     height: 50%;
-    // background-image: linear-gradient(to top right, #D8CDC5 0%, #DECAC3 50%, #FFFFFF 120%);
     background-color: $backgroundColor;
     padding: 30px;
     text-align: center;
@@ -44,6 +45,7 @@ a {
       font-size: 60px;
       display: inline-block;
       vertical-align: middle;
+      margin: 20px 0px;
     }
     p {
       font-size: 50px;
@@ -62,17 +64,15 @@ a {
     }
   }
   .card_container_top {
-    width: 50%;
+    width: 100%;
     height: 25%;
-    //border: 1px solid black;
     display: flex;
     justify-content: space-around;
-    // background-color: #DECAC3;
     background-color: $backgroundColor;
     z-index: 9998;
     .flip_card {
       @include flip_card;
-      width: 300px;
+      width: 35%;
       height: 100%;
     }
     .flip_card_inner {
@@ -100,12 +100,11 @@ a {
     }
   }
   .card_container_bot {
-    width: 50%;
+    width: 100%;
     height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    // background-image: linear-gradient(to top right, #FFFFFF 0%, #DECAC3 50%, #DECAC3 120%);
     background-color: $backgroundColor;
     position: relative;
     z-index: 9999;
@@ -159,6 +158,22 @@ a {
   }
 }
 
+.container_right {
+  width: 50%;
+  height: 100vh;
+  background-color: $cardColorBack;
+  z-index: 0;
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+footer {
+  display: none;
+}
+// TRIANGLE DECORATION
 .triangle_right {
   @include triangleRight;
 }
@@ -167,4 +182,266 @@ a {
 }
 .triangle_left_border_left {
   @include triangleLeftBorderLeft;
+}
+// /TRIANGLE DECORATION
+
+// MEDIA QUERY
+@media all and (max-width: 2556px) {
+  .triangle_right {
+    right: -7.8%;
+  }
+  .triangle_left {
+    right: -2.5%;
+  }
+}
+@media all and (max-width: 1920px) {
+  .triangle_right {
+    right: -7.8%;
+  }
+  .triangle_left {
+    right: -2.5%;
+  }
+}
+@media all and (max-width: 1024px) {
+  #title_container {
+    width: 100%;
+    height: 50%;
+    padding: 45px;
+    h1 {
+      font-size: 35px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    h1, h2, {
+      padding: 5px 0px;
+    }
+    h3 {
+      font-size: 15px;
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+  #card_container_top {
+    .flip_card {
+      width: 38%;
+      height: 80%;
+    }
+    .flip_card_front {
+      h3 {
+        font-size: 15px;
+      }
+    }
+    .flip_card_back {
+      padding: 15px;
+    }
+  }
+  #card_container_bot {
+    .flip_card {
+      width: 88%;
+      height: 90%;
+    }
+  }
+  .triangle_right {
+    // display: none;
+    right: -7.8%;
+    border-bottom: 29px solid $backgroundColor;
+    border-left:   29px solid transparent;
+    border-right:  29px solid transparent;
+  }
+  .triangle_left {
+    right: -2.5%;
+    border-bottom: 29px solid $cardColorBack;
+    border-left:   29px solid transparent;
+    border-right:  29px solid transparent;
+  }
+  .triangle_left_border_left {
+    left: -2.5%;
+    border-bottom: 29px solid $cardColorBack;
+    border-left:   29px solid transparent;
+    border-right:  29px solid transparent;
+  }
+  .container_right {
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+@media all and (max-width: 768px) and (min-width: 426px) {
+  #title_container {
+    width: 100%;
+    height: 50%;
+    padding: 45px;
+    h1 {
+      font-size: 35px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    h1, h2, {
+      padding: 5px 0px;
+    }
+    h3 {
+      font-size: 15px;
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+  #card_container_top {
+    .flip_card {
+      width: 38%;
+      height: 80%;
+    }
+    .flip_card_front {
+      h3 {
+        font-size: 15px;
+      }
+    }
+    .flip_card_back {
+      padding: 15px;
+    }
+  }
+  #card_container_bot {
+    .flip_card {
+      width: 88%;
+      height: 90%;
+    }
+  }
+  .triangle_right {
+    // display: none;
+    right: -7.8%;
+    border-bottom: 20px solid $backgroundColor;
+    border-left:   20px solid transparent;
+    border-right:  20px solid transparent;
+  }
+  .triangle_left {
+    right: -2.5%;
+    border-bottom: 20px solid $cardColorBack;
+    border-left:   20px solid transparent;
+    border-right:  20px solid transparent;
+  }
+  .triangle_left_border_left {
+    left: -2.5%;
+    border-bottom: 20px solid $cardColorBack;
+    border-left:   20px solid transparent;
+    border-right:  20px solid transparent;
+  }
+  .container_right {
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+@media all and (max-width: 425px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    display: block;
+    text-align: center;
+    background-color: $cardColorBack;
+    color: $cardColorFront;
+  }
+  .container_left {
+    width: 100%;
+    .title_container {
+      height: 400px;
+      padding: 20px;
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+        display: none;
+      }
+    }
+    .card_container_top {
+      height: 400px;
+      flex-direction: column;
+      align-items: center;
+      .flip_card {
+        margin: 20px 0px;
+        width: 80%;
+      }
+    }
+    .card_container_bot {
+      height: 300px;
+      .flip_card {
+        width: 80%;
+      }
+    }
+  }
+  .container_right {
+    display: none;
+  }
+  .triangle_right {
+    display: none;
+  }
+  .triangle_left {
+    right: -3.2%;
+    border-bottom: 30px solid $cardColorBack;
+    border-left:   30px solid transparent;
+    border-right:  30px solid transparent;
+  }
+  .triangle_left_border_left {
+    left: -4%;
+    border-bottom: 30px solid $cardColorBack;
+    border-left:   30px solid transparent;
+    border-right:  30px solid transparent;
+  }
+  .black_triangle1 {
+    top: -4%;
+  }
+  .black_triangle2 {
+    top: 17%;
+  }
+  .black_triangle3 {
+    top: 34%;
+  }
+  .black_triangle4 {
+    top: 51%;
+  }
+  .black_triangle5 {
+    top: 68%;
+  }
+  .black_triangle6 {
+    top: 85%;
+  }
+  .black_triangle7 {
+    top: 102%;
+  }
+  .black_triangle8 {
+    top: 119%;
+  }
+  .black_triangle9 {
+    top: 136%;
+  }
+  .black_triangle10 {
+    top: 153%;
+  }
+}
+@media all and (max-width: 375px)  {
+  .triangle_left {
+    right: -4.5%;
+  }
+  .triangle_left_border_left {
+    left: -4.5%;
+  }
+}
+@media all and (max-width: 320px)  {
+  .triangle_left {
+    right: -4.5%;
+  }
+  .triangle_left_border_left {
+    left: -4.5%;
+  }
 }

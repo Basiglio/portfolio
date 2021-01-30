@@ -35,6 +35,8 @@
 @mixin flip_card_back {
   background-color: $cardColorBack;
   color: white;
+  padding: 30px;
+  overflow-y: scroll;
   transform: rotateY(180deg);
 }
 

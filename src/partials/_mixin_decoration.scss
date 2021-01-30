@@ -5,32 +5,34 @@
   border-right:  50px solid transparent;
   transform: rotate(90deg);
   position: absolute;
-  right: 45.6%;
+  right: -8.7%;
   z-index: 100000;
 }
 
 @mixin triangleLeft {
   width: 0; height: 0; line-height: 0;
-  border-bottom: 50px solid $textColor;
+  border-bottom: 50px solid $cardColorBack;
   border-left:   50px solid transparent;
   border-right:  50px solid transparent;
   transform: rotate(-90deg);
   position: absolute;
-  right: 48.5%;
+  right: -3%;
   z-index: 100000;
 }
 @mixin triangleLeftBorderLeft {
   width: 0; height: 0; line-height: 0;
-  border-bottom: 50px solid $textColor;
+  border-bottom: 50px solid $cardColorBack;
   border-left:   50px solid transparent;
   border-right:  50px solid transparent;
   transform: rotate(90deg);
   position: absolute;
-  left: -2%;
+  left: -3%;
   z-index: 100000;
 }
 
-
+.mobile {
+  display: none;
+}
 #triangle1 {
   top: 2%;
 }

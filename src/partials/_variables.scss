@@ -1,7 +1,83 @@
-$cardColorFront: #FFD152;
+$cardColorFront: #F7CD6A;
 
 $cardColorBack: #584A4F;
 
 $backgroundColor: #EEDAB9;
 
 $textColor: #353537;
+
+
+
+
+
+
+// @media all and (max-width: 2560px) and (min-width: 1920px) {
+//   #title_container {
+//     width: 100%;
+//     height: 50%;
+//     padding: 45px;
+//     h1 {
+//       font-size: 100px;
+//     }
+//     h2 {
+//       font-size: 60px;
+//     }
+//     h1, h2, {
+//       padding: 50px 0px;
+//     }
+//     h3 {
+//       font-size: 30px;
+//     }
+//     p {
+//       font-size: 50px;
+//     }
+//   }
+//   #card_container_top {
+//     .flip_card {
+//       width: 38%;
+//       height: 80%;
+//     }
+//     .flip_card_front {
+//       h3 {
+//         font-size: 40px;
+//       }
+//     }
+//     .flip_card_back {
+//       padding: 20px;
+//       font-size: 30px;
+//     }
+//   }
+//   #card_container_bot {
+//     .flip_card {
+//       width: 88%;
+//       height: 90%;
+//     }
+//   }
+//   .triangle_right {
+//     // display: none;
+//     right: -7.8%;
+//     border-bottom: 70px solid $backgroundColor;
+//     border-left:   70px solid transparent;
+//     border-right:  70px solid transparent;
+//   }
+//   .triangle_left {
+//     right: -2.5%;
+//     border-bottom: 70px solid $cardColorBack;
+//     border-left:   70px solid transparent;
+//     border-right:  70px solid transparent;
+//   }
+//   .triangle_left_border_left {
+//     left: -2.5%;
+//     border-bottom: 70px solid $cardColorBack;
+//     border-left:   70px solid transparent;
+//     border-right:  70px solid transparent;
+//   }
+//   .container_right {
+//     img {
+//       width: 100%;
+//       height: 100vh;
+//       object-fit: cover;
+//       object-position: center;
+//     }
+//   }
+// }

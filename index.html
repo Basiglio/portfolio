@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf_8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
@@ -17,89 +18,103 @@
   <body>
     <span id="app">
       <div class="container">
-        <div class="title_container">
-          <h2>“{{title}}„</h2>
-          <h3>{{subtitle}}</h3>
-          <p class="animate__animated animate__slideInLeft">{{tagOpen}}</p>
-          <h1 class="animate__animated animate__zoomInDown">{{myName}}</h1>
-          <p class="animate__animated animate__slideInRight">{{tagClosed}}</p>
-          <h3>{{qualification}}</h3>
-        </div>
+        <div class="container_left">
 
-        <div class="card_container_top">
-          <div :class="element.animation" v-for="element in flipCardContent">
-            <div class="flip_card_inner">
-              <div class="flip_card_front">
-                <h3>{{element.title}}</h3>
-              </div>
-              <div class="flip_card_back">
-                <p>{{element.paragraph}}</p>
+          <div class="title_container" id="title_container">
+            <h2>“{{title}}„</h2>
+            <h3>{{subtitle}}</h3>
+            <p class="animate__animated animate__slideInLeft">{{tagOpen}}</p>
+            <h1 class="animate__animated animate__zoomInDown">{{myName}}</h1>
+            <p class="animate__animated animate__slideInRight">{{tagClosed}}</p>
+            <h3>{{qualification}}</h3>
+          </div>
+
+          <div class="card_container_top" id="card_container_top">
+            <div :class="element.animation" v-for="element in flipCardContent">
+              <div class="flip_card_inner">
+                <div class="flip_card_front">
+                  <h3>{{element.title}}</h3>
+                </div>
+                <div class="flip_card_back">
+                  <p>{{element.paragraph}}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card_container_bot">
-          <div class="flip_card">
-            <div class="flip_card_inner">
-              <div class="flip_card_front">
-                <div class="top_card">
-                  <h3>CONTACTS</h3>
-                  <ul>
-                    <li v-for="contact in contacts">
-                      <a :href="contact.Link"><i :class="contact.Logo"></i><a>
-                    </li>
-                  </ul>
+
+          <div class="card_container_bot" id="card_container_bot">
+            <div class="flip_card">
+              <div class="flip_card_inner">
+                <div class="flip_card_front">
+                  <div class="top_card">
+                    <h3>CONTACTS</h3>
+                    <ul>
+                      <li v-for="contact in contacts">
+                        <a :href="contact.Link"><i :class="contact.Logo"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bot_card">
+                    <ul>
+                      <li>{{address}}</li>
+                      <li>{{telephone}}</li>
+                      <li>{{mail}}</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="bot_card">
-                  <ul>
-                    <li>{{address}}</li>
-                    <li>{{telephone}}</li>
-                    <li>{{mail}}</li>
-                  </ul>
+                <div class="flip_card_back">
                 </div>
-              </div>
-              <div class="flip_card_back">
               </div>
             </div>
           </div>
-        </div>
-        <!-- RIGHT TRIANGLE -->
-        <div class="triangle_right" id="triangle1"></div>
-        <div class="triangle_right" id="triangle2"></div>
-        <div class="triangle_right" id="triangle3"></div>
-        <div class="triangle_right" id="triangle4"></div>
-        <div class="triangle_right" id="triangle5"></div>
-        <div class="triangle_right" id="triangle6"></div>
-        <div class="triangle_right" id="triangle7"></div>
-        <div class="triangle_right" id="triangle8"></div>
-        <div class="triangle_right" id="triangle9"></div>
-        <div class="triangle_right" id="triangle10"></div>
-        <!-- /RIGHT TRIANGLE -->
-        <!-- LEFT TRIANGLE -->
-        <div class="triangle_left black_triangle1"></div>
-        <div class="triangle_left black_triangle2"></div>
-        <div class="triangle_left black_triangle3"></div>
-        <div class="triangle_left black_triangle4"></div>
-        <div class="triangle_left black_triangle5"></div>
-        <div class="triangle_left black_triangle6"></div>
-        <div class="triangle_left black_triangle7"></div>
-        <div class="triangle_left black_triangle8"></div>
-        <div class="triangle_left black_triangle9"></div>
-        <div class="triangle_left black_triangle10"></div>
-        <!-- /LEFT TRIANGLE -->
-        <!-- BORDER RIGHT TRIANGLE -->
-        <div class="triangle_left_border_left black_triangle1"></div>
-        <div class="triangle_left_border_left black_triangle2"></div>
-        <div class="triangle_left_border_left black_triangle3"></div>
-        <div class="triangle_left_border_left black_triangle4"></div>
-        <div class="triangle_left_border_left black_triangle5"></div>
-        <div class="triangle_left_border_left black_triangle6"></div>
-        <div class="triangle_left_border_left black_triangle7"></div>
-        <div class="triangle_left_border_left black_triangle8"></div>
-        <div class="triangle_left_border_left black_triangle9"></div>
-        <div class="triangle_left_border_left black_triangle10"></div>
+          <footer>
+            <p>mobile version</p>
+          </footer>
 
+          <!-- RIGHT TRIANGLE -->
+          <div class="triangle_right" id="triangle1"></div>
+          <div class="triangle_right" id="triangle2"></div>
+          <div class="triangle_right" id="triangle3"></div>
+          <div class="triangle_right" id="triangle4"></div>
+          <div class="triangle_right" id="triangle5"></div>
+          <div class="triangle_right" id="triangle6"></div>
+          <div class="triangle_right" id="triangle7"></div>
+          <div class="triangle_right" id="triangle8"></div>
+          <div class="triangle_right" id="triangle9"></div>
+          <div class="triangle_right" id="triangle10"></div>
+          <!-- /RIGHT TRIANGLE -->
+          <!-- LEFT TRIANGLE -->
+          <div class="triangle_left black_triangle1"></div>
+          <div class="triangle_left black_triangle2"></div>
+          <div class="triangle_left black_triangle3"></div>
+          <div class="triangle_left black_triangle4"></div>
+          <div class="triangle_left black_triangle5"></div>
+          <div class="triangle_left black_triangle6"></div>
+          <div class="triangle_left black_triangle7"></div>
+          <div class="triangle_left black_triangle8"></div>
+          <div class="triangle_left black_triangle9"></div>
+          <div class="triangle_left black_triangle10"></div>
+          <!-- /LEFT TRIANGLE -->
+          <!-- BORDER RIGHT TRIANGLE -->
+          <div class="triangle_left_border_left black_triangle1"></div>
+          <div class="triangle_left_border_left black_triangle2"></div>
+          <div class="triangle_left_border_left black_triangle3"></div>
+          <div class="triangle_left_border_left black_triangle4"></div>
+          <div class="triangle_left_border_left black_triangle5"></div>
+          <div class="triangle_left_border_left black_triangle6"></div>
+          <div class="triangle_left_border_left black_triangle7"></div>
+          <div class="triangle_left_border_left black_triangle8"></div>
+          <div class="triangle_left_border_left black_triangle9"></div>
+          <div class="triangle_left_border_left black_triangle10"></div>
+          <!-- /BORDER RIGHT TRIANGLE -->
+        </div>
+
+        <div class="container_right">
+          <img :src="foto" :alt="foto">
+        </div>
       </div>
+
+
     </span>
     <script src="js/myscript.js" charset="utf_8"></script>
   </body>

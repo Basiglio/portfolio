@@ -36,5 +36,6 @@ var app = new Vue({
     address: "Via Ranzi, 192",
     telephone: "3497951025",
     mail: "emilio.furnari87@gmail.com",
+    foto: "img/foto.jpeg",
   }
 })

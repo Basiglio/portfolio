@@ -12,6 +12,10 @@ i:hover {
   color: #F26C0C;
 }
 
+.mobile {
+  display: none;
+}
+
 #triangle1 {
   top: 2%;
 }
@@ -120,17 +124,20 @@ a {
 }
 
 .container {
-  width: 100%;
+  display: flex;
+}
+
+.container_left {
+  width: 50%;
   height: 100vh;
-  background-image: url("../img/foto.jpeg");
-  opacity: 0.9;
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
   position: relative;
+  z-index: 1;
 }
-.container .title_container {
-  width: 50%;
+.container_left .title_container {
+  width: 100%;
   height: 50%;
   background-color: #EEDAB9;
   padding: 30px;
@@ -138,45 +145,46 @@ a {
   position: relative;
   z-index: 9999;
 }
-.container .title_container h1, .container .title_container h2 {
+.container_left .title_container h1, .container_left .title_container h2 {
   padding: 25px 0px;
   font-family: "Monoton", cursive;
 }
-.container .title_container h1 {
+.container_left .title_container h1 {
   font-size: 60px;
   display: inline-block;
   vertical-align: middle;
+  margin: 20px 0px;
 }
-.container .title_container p {
+.container_left .title_container p {
   font-size: 50px;
   display: inline-block;
   font-family: "Roboto Mono", monospace;
   vertical-align: middle;
 }
-.container .title_container h2 {
+.container_left .title_container h2 {
   font-size: 50px;
 }
-.container .title_container h3 {
+.container_left .title_container h3 {
   font-family: "Roboto Mono", monospace;
 }
-.container .title_container h1, .container .title_container h2, .container .title_container h3, .container .title_container p {
+.container_left .title_container h1, .container_left .title_container h2, .container_left .title_container h3, .container_left .title_container p {
   color: #353537;
 }
-.container .card_container_top {
-  width: 50%;
+.container_left .card_container_top {
+  width: 100%;
   height: 25%;
   display: flex;
   justify-content: space-around;
   background-color: #EEDAB9;
   z-index: 9998;
 }
-.container .card_container_top .flip_card {
+.container_left .card_container_top .flip_card {
   background-color: transparent;
   perspective: 1000px;
-  width: 300px;
+  width: 35%;
   height: 100%;
 }
-.container .card_container_top .flip_card_inner {
+.container_left .card_container_top .flip_card_inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -184,10 +192,10 @@ a {
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-.container .card_container_top .flip_card:hover .flip_card_inner {
+.container_left .card_container_top .flip_card:hover .flip_card_inner {
   transform: rotateY(180deg);
 }
-.container .card_container_top .flip_card_front, .container .card_container_top .flip_card_back {
+.container_left .card_container_top .flip_card_front, .container_left .card_container_top .flip_card_back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -195,24 +203,26 @@ a {
   backface-visibility: hidden;
   border-radius: 10px;
 }
-.container .card_container_top .flip_card_front {
-  background-color: #FFD152;
+.container_left .card_container_top .flip_card_front {
+  background-color: #F7CD6A;
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container .card_container_top .flip_card_front h3 {
+.container_left .card_container_top .flip_card_front h3 {
   padding: 30px;
   font-family: "Monoton", cursive;
 }
-.container .card_container_top .flip_card_back {
+.container_left .card_container_top .flip_card_back {
   background-color: #584A4F;
   color: white;
+  padding: 30px;
+  overflow-y: scroll;
   transform: rotateY(180deg);
 }
-.container .card_container_bot {
-  width: 50%;
+.container_left .card_container_bot {
+  width: 100%;
   height: 25%;
   display: flex;
   justify-content: center;
@@ -221,7 +231,7 @@ a {
   position: relative;
   z-index: 9999;
 }
-.container .card_container_bot h3 {
+.container_left .card_container_bot h3 {
   font-size: 40px;
   position: absolute;
   left: 50%;
@@ -229,10 +239,10 @@ a {
   transform: translate(-50%, -50%);
   font-family: "Monoton", cursive;
 }
-.container .card_container_bot ul {
+.container_left .card_container_bot ul {
   display: none;
 }
-.container .card_container_bot .flip_card {
+.container_left .card_container_bot .flip_card {
   background-color: transparent;
   perspective: 1000px;
   width: 720px;
@@ -240,7 +250,7 @@ a {
   display: flex;
   flex-direction: column;
 }
-.container .card_container_bot .flip_card_inner {
+.container_left .card_container_bot .flip_card_inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -248,16 +258,16 @@ a {
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-.container .card_container_bot .flip_card:hover .flip_card_inner {
+.container_left .card_container_bot .flip_card:hover .flip_card_inner {
   transform: rotateX(720deg);
 }
-.container .card_container_bot .flip_card:hover .flip_card_inner h3 {
+.container_left .card_container_bot .flip_card:hover .flip_card_inner h3 {
   display: none;
 }
-.container .card_container_bot .flip_card:hover .flip_card_inner ul {
+.container_left .card_container_bot .flip_card:hover .flip_card_inner ul {
   display: block;
 }
-.container .card_container_bot .flip_card_front, .container .card_container_bot .flip_card_back {
+.container_left .card_container_bot .flip_card_front, .container_left .card_container_bot .flip_card_back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -265,21 +275,40 @@ a {
   backface-visibility: hidden;
   border-radius: 10px;
 }
-.container .card_container_bot .flip_card_front {
-  background-color: #FFD152;
+.container_left .card_container_bot .flip_card_front {
+  background-color: #F7CD6A;
   color: black;
 }
-.container .card_container_bot .flip_card_front .top_card, .container .card_container_bot .flip_card_front .bot_card {
+.container_left .card_container_bot .flip_card_front .top_card, .container_left .card_container_bot .flip_card_front .bot_card {
   width: 100%;
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container .card_container_bot .flip_card_back {
+.container_left .card_container_bot .flip_card_back {
   background-color: #584A4F;
   color: white;
+  padding: 30px;
+  overflow-y: scroll;
   transform: rotateY(180deg);
+}
+
+.container_right {
+  width: 50%;
+  height: 100vh;
+  background-color: #584A4F;
+  z-index: 0;
+}
+.container_right img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer {
+  display: none;
 }
 
 .triangle_right {
@@ -291,7 +320,7 @@ a {
   border-right: 50px solid transparent;
   transform: rotate(90deg);
   position: absolute;
-  right: 45.6%;
+  right: -8.7%;
   z-index: 100000;
 }
 
@@ -299,12 +328,12 @@ a {
   width: 0;
   height: 0;
   line-height: 0;
-  border-bottom: 50px solid #353537;
+  border-bottom: 50px solid #584A4F;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   transform: rotate(-90deg);
   position: absolute;
-  right: 48.5%;
+  right: -3%;
   z-index: 100000;
 }
 
@@ -312,11 +341,289 @@ a {
   width: 0;
   height: 0;
   line-height: 0;
-  border-bottom: 50px solid #353537;
+  border-bottom: 50px solid #584A4F;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   transform: rotate(90deg);
   position: absolute;
-  left: -2%;
+  left: -3%;
   z-index: 100000;
+}
+
+@media all and (max-width: 2556px) {
+  .triangle_right {
+    right: -7.8%;
+  }
+
+  .triangle_left {
+    right: -2.5%;
+  }
+}
+@media all and (max-width: 1920px) {
+  .triangle_right {
+    right: -7.8%;
+  }
+
+  .triangle_left {
+    right: -2.5%;
+  }
+}
+@media all and (max-width: 1024px) {
+  #title_container {
+    width: 100%;
+    height: 50%;
+    padding: 45px;
+  }
+  #title_container h1 {
+    font-size: 35px;
+  }
+  #title_container h2 {
+    font-size: 30px;
+  }
+  #title_container h1, #title_container h2 {
+    padding: 5px 0px;
+  }
+  #title_container h3 {
+    font-size: 15px;
+  }
+  #title_container p {
+    font-size: 25px;
+  }
+
+  #card_container_top .flip_card {
+    width: 38%;
+    height: 80%;
+  }
+  #card_container_top .flip_card_front h3 {
+    font-size: 15px;
+  }
+  #card_container_top .flip_card_back {
+    padding: 15px;
+  }
+
+  #card_container_bot .flip_card {
+    width: 88%;
+    height: 90%;
+  }
+
+  .triangle_right {
+    right: -7.8%;
+    border-bottom: 29px solid #EEDAB9;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+  }
+
+  .triangle_left {
+    right: -2.5%;
+    border-bottom: 29px solid #584A4F;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+  }
+
+  .triangle_left_border_left {
+    left: -2.5%;
+    border-bottom: 29px solid #584A4F;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+  }
+
+  .container_right img {
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+@media all and (max-width: 768px) and (min-width: 426px) {
+  #title_container {
+    width: 100%;
+    height: 50%;
+    padding: 45px;
+  }
+  #title_container h1 {
+    font-size: 35px;
+  }
+  #title_container h2 {
+    font-size: 30px;
+  }
+  #title_container h1, #title_container h2 {
+    padding: 5px 0px;
+  }
+  #title_container h3 {
+    font-size: 15px;
+  }
+  #title_container p {
+    font-size: 25px;
+  }
+
+  #card_container_top .flip_card {
+    width: 38%;
+    height: 80%;
+  }
+  #card_container_top .flip_card_front h3 {
+    font-size: 15px;
+  }
+  #card_container_top .flip_card_back {
+    padding: 15px;
+  }
+
+  #card_container_bot .flip_card {
+    width: 88%;
+    height: 90%;
+  }
+
+  .triangle_right {
+    right: -7.8%;
+    border-bottom: 20px solid #EEDAB9;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+
+  .triangle_left {
+    right: -2.5%;
+    border-bottom: 20px solid #584A4F;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+
+  .triangle_left_border_left {
+    left: -2.5%;
+    border-bottom: 20px solid #584A4F;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+
+  .container_right img {
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+@media all and (max-width: 425px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+    background-color: #584A4F;
+    color: #F7CD6A;
+  }
+
+  .container_left {
+    width: 100%;
+  }
+  .container_left .title_container {
+    height: 400px;
+    padding: 20px;
+  }
+  .container_left .title_container h2 {
+    font-size: 30px;
+  }
+  .container_left .title_container p {
+    font-size: 15px;
+    display: none;
+  }
+  .container_left .card_container_top {
+    height: 400px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container_left .card_container_top .flip_card {
+    margin: 20px 0px;
+    width: 80%;
+  }
+  .container_left .card_container_bot {
+    height: 300px;
+  }
+  .container_left .card_container_bot .flip_card {
+    width: 80%;
+  }
+
+  .container_right {
+    display: none;
+  }
+
+  .triangle_right {
+    display: none;
+  }
+
+  .triangle_left {
+    right: -3.2%;
+    border-bottom: 30px solid #584A4F;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+  }
+
+  .triangle_left_border_left {
+    left: -4%;
+    border-bottom: 30px solid #584A4F;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+  }
+
+  .black_triangle1 {
+    top: -4%;
+  }
+
+  .black_triangle2 {
+    top: 17%;
+  }
+
+  .black_triangle3 {
+    top: 34%;
+  }
+
+  .black_triangle4 {
+    top: 51%;
+  }
+
+  .black_triangle5 {
+    top: 68%;
+  }
+
+  .black_triangle6 {
+    top: 85%;
+  }
+
+  .black_triangle7 {
+    top: 102%;
+  }
+
+  .black_triangle8 {
+    top: 119%;
+  }
+
+  .black_triangle9 {
+    top: 136%;
+  }
+
+  .black_triangle10 {
+    top: 153%;
+  }
+}
+@media all and (max-width: 375px) {
+  .triangle_left {
+    right: -4.5%;
+  }
+
+  .triangle_left_border_left {
+    left: -4.5%;
+  }
+}
+@media all and (max-width: 320px) {
+  .triangle_left {
+    right: -4.5%;
+  }
+
+  .triangle_left_border_left {
+    left: -4.5%;
+  }
 }
