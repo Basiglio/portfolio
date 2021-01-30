@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Portfolio</title>
   </head>
   <body>
@@ -15,12 +20,14 @@
         <div class="title_container">
           <h2>“{{title}}„</h2>
           <h3>{{subtitle}}</h3>
-          <h1>{{myName}}</h1>
+          <p class="animate__animated animate__slideInLeft">{{tagOpen}}</p>
+          <h1 class="animate__animated animate__zoomInDown">{{myName}}</h1>
+          <p class="animate__animated animate__slideInRight">{{tagClosed}}</p>
           <h3>{{qualification}}</h3>
         </div>
 
         <div class="card_container_top">
-          <div class="flip_card" v-for="element in flipCardContent">
+          <div :class="element.animation" v-for="element in flipCardContent">
             <div class="flip_card_inner">
               <div class="flip_card_front">
                 <h3>{{element.title}}</h3>
@@ -56,23 +63,41 @@
             </div>
           </div>
         </div>
-        <div class="triangle1"></div>
-        <div class="triangle2"></div>
-        <div class="triangle3"></div>
-        <div class="triangle4"></div>
-        <div class="triangle5"></div>
-        <div class="triangle6"></div>
-        <div class="triangle7"></div>
-        <div class="triangle8"></div>
-        <div class="triangle9"></div>
-        <div class="triangle10"></div>
-        <div class="triangle11"></div>
-        <div class="black_triangle1"></div>
-        <div class="black_triangle2"></div>
-        <div class="black_triangle3"></div>
-        <div class="black_triangle4"></div>
-        <div class="black_triangle5"></div>
-        <div class="black_triangle6"></div>
+        <!-- RIGHT TRIANGLE -->
+        <div class="triangle_right" id="triangle1"></div>
+        <div class="triangle_right" id="triangle2"></div>
+        <div class="triangle_right" id="triangle3"></div>
+        <div class="triangle_right" id="triangle4"></div>
+        <div class="triangle_right" id="triangle5"></div>
+        <div class="triangle_right" id="triangle6"></div>
+        <div class="triangle_right" id="triangle7"></div>
+        <div class="triangle_right" id="triangle8"></div>
+        <div class="triangle_right" id="triangle9"></div>
+        <div class="triangle_right" id="triangle10"></div>
+        <!-- /RIGHT TRIANGLE -->
+        <!-- LEFT TRIANGLE -->
+        <div class="triangle_left black_triangle1"></div>
+        <div class="triangle_left black_triangle2"></div>
+        <div class="triangle_left black_triangle3"></div>
+        <div class="triangle_left black_triangle4"></div>
+        <div class="triangle_left black_triangle5"></div>
+        <div class="triangle_left black_triangle6"></div>
+        <div class="triangle_left black_triangle7"></div>
+        <div class="triangle_left black_triangle8"></div>
+        <div class="triangle_left black_triangle9"></div>
+        <div class="triangle_left black_triangle10"></div>
+        <!-- /LEFT TRIANGLE -->
+        <!-- BORDER RIGHT TRIANGLE -->
+        <div class="triangle_left_border_left black_triangle1"></div>
+        <div class="triangle_left_border_left black_triangle2"></div>
+        <div class="triangle_left_border_left black_triangle3"></div>
+        <div class="triangle_left_border_left black_triangle4"></div>
+        <div class="triangle_left_border_left black_triangle5"></div>
+        <div class="triangle_left_border_left black_triangle6"></div>
+        <div class="triangle_left_border_left black_triangle7"></div>
+        <div class="triangle_left_border_left black_triangle8"></div>
+        <div class="triangle_left_border_left black_triangle9"></div>
+        <div class="triangle_left_border_left black_triangle10"></div>
 
       </div>
     </span>

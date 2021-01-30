@@ -1,0 +1,96 @@
+@mixin triangleRight {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid $backgroundColor;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.6%;
+  z-index: 100000;
+}
+
+@mixin triangleLeft {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid $textColor;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 48.5%;
+  z-index: 100000;
+}
+@mixin triangleLeftBorderLeft {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid $textColor;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  left: -2%;
+  z-index: 100000;
+}
+
+
+#triangle1 {
+  top: 2%;
+}
+#triangle2 {
+  top: 12%;
+}
+#triangle3 {
+  top: 22%;
+}
+#triangle4 {
+  top: 32%;
+}
+#triangle5 {
+  top: 42%;
+}
+#triangle6 {
+  top: 52%;
+}
+#triangle7 {
+  top: 62%;
+}
+#triangle8 {
+  top: 72%;
+}
+#triangle9 {
+  top: 82%;
+}
+#triangle10 {
+  top: 92%;
+}
+#triangle11 {
+  top: 102%;
+}
+.black_triangle1 {
+  top: 2%;
+}
+.black_triangle2 {
+  top: 12%;
+}
+.black_triangle3 {
+  top: 22%;
+}
+.black_triangle4 {
+  top: 32%;
+}
+.black_triangle5 {
+  top: 42%;
+}
+.black_triangle6 {
+  top: 52%;
+}
+.black_triangle7 {
+  top: 62%;
+}
+.black_triangle8 {
+  top: 72%;
+}
+.black_triangle9 {
+  top: 82%;
+}
+.black_triangle10 {
+  top: 92%;
+}
