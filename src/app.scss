@@ -4,6 +4,7 @@ margin: 0;
 padding: 0;
 }
 @import 'partials/_mixin.scss';
+@import 'partials/_icon.scss';
 
 li {
   @include listStyle;
@@ -20,7 +21,7 @@ a {
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
-
+  position: relative;
   .title_container {
     width: 50%;
     height: 50%;
@@ -29,8 +30,11 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    z-index: 9999;
     h1, h2, {
       padding: 25px 0px;
+      font-family: 'Monoton', cursive;
     }
     h1 {
       font-size: 60px;
@@ -46,6 +50,7 @@ a {
     display: flex;
     justify-content: space-around;
     background-color: #DECAC3;
+    z-index: 9998;
     .flip_card {
       @include flip_card;
       width: 300px;
@@ -62,6 +67,13 @@ a {
     }
     .flip_card_front {
       @include flip_card_front;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        padding: 30px;
+        font-family: 'Monoton', cursive;
+      }
     }
     .flip_card_back {
       @include flip_card_back
@@ -75,12 +87,14 @@ a {
     align-items: center;
     background-image: linear-gradient(to top right, #FFFFFF 0%, #DECAC3 50%, #DECAC3 120%);
     position: relative;
+    z-index: 9999;
     h3 {
       font-size: 40px;
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      font-family: 'Monoton', cursive;
     }
     ul {
       display: none;
@@ -89,6 +103,8 @@ a {
       @include flip_card;
       width: 800px;
       height: 200px;
+      display: flex;
+      flex-direction: column;
     }
     .flip_card_inner {
       @include flip_card_inner;
@@ -107,9 +123,204 @@ a {
     }
     .flip_card_front {
       @include flip_card_front;
+      .top_card, .bot_card {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
     .flip_card_back {
       @include flip_card_back
     }
   }
+}
+
+.triangle1 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid #E7D9D4;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.7%;
+  top: 0%;
+  z-index: 100000;
+}
+.triangle2 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid #E7D9D4;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.7%;
+  top: 10%;
+  z-index: 100000;
+}
+.triangle3 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid #E7D9D4;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.7%;
+  top: 20%;
+  z-index: 100000;
+}
+.triangle4 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid #E7D9D4;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.7%;
+  top: 30%;
+  z-index: 100000;
+}
+.triangle5 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid #E7D9D4;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.7%;
+  top: 40%;
+  z-index: 100000;
+}
+.triangle6 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid #E7D9D4;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.7%;
+  top: 50%;
+  z-index: 100000;
+}
+.triangle7 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid #E7D9D4;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.7%;
+  top: 60%;
+  z-index: 100000;
+}
+.triangle8 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid #E7D9D4;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.7%;
+  top: 60%;
+  z-index: 100000;
+}
+.triangle9 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid #E7D9D4;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.7%;
+  top: 70%;
+  z-index: 100000;
+}
+.triangle10 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid #E7D9D4;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.7%;
+  top: 80%;
+  z-index: 100000;
+}
+.triangle11 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid #E7D9D4;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 45.7%;
+  top: 90%;
+  z-index: 100000;
+}
+.black_triangle1 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid black;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 48.5%;
+  top: 0%;
+  z-index: 100000;
+}
+.black_triangle2 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid black;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 48.5%;
+  top: 10%;
+  z-index: 100000;
+}
+.black_triangle3 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid black;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 48.5%;
+  top: 20%;
+  z-index: 100000;
+}
+.black_triangle4 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid black;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 48.5%;
+  top: 30%;
+  z-index: 100000;
+}
+.black_triangle5 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid black;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 48.5%;
+  top: 40%;
+  z-index: 100000;
+}
+.black_triangle6 {
+  width: 0; height: 0; line-height: 0;
+  border-bottom: 50px solid black;
+  border-left:   50px solid transparent;
+  border-right:  50px solid transparent;
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 48.5%;
+  top: 50%;
+  z-index: 100000;
 }

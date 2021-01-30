@@ -3,63 +3,79 @@
   <head>
     <meta charset="utf_8">
     <link rel="stylesheet" href="css/app.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Yusei+Magic&display=swap" rel="stylesheet">
     <title>Portfolio</title>
   </head>
   <body>
     <span id="app">
-      {{message}}
       <div class="container">
         <div class="title_container">
-          <h2>“Hello World„</h2>
-          <h3>my name is,</h3>
-          <h1>Emilio</h1>
-          <h3>Junior Full Stack Developer</h3>
-
+          <h2>“{{title}}„</h2>
+          <h3>{{subtitle}}</h3>
+          <h1>{{myName}}</h1>
+          <h3>{{qualification}}</h3>
         </div>
+
         <div class="card_container_top">
-          <div class="flip_card">
+          <div class="flip_card" v-for="element in flipCardContent">
             <div class="flip_card_inner">
               <div class="flip_card_front">
-                <h3>WHO AM I?</h3>
+                <h3>{{element.title}}</h3>
               </div>
               <div class="flip_card_back">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="flip_card">
-            <div class="flip_card_inner">
-              <div class="flip_card_front">
-                <h3>MY CV</h3>
-              </div>
-              <div class="flip_card_back">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>{{element.paragraph}}</p>
               </div>
             </div>
           </div>
         </div>
-
         <div class="card_container_bot">
           <div class="flip_card">
             <div class="flip_card_inner">
               <div class="flip_card_front">
-                <h3>CONTACTS</h3>
-                <ul>
-                  <li>
-                    <a href="https://github.com/Basiglio">GitHub
-                      <a>
-                  </li>
-                </ul>
-
+                <div class="top_card">
+                  <h3>CONTACTS</h3>
+                  <ul>
+                    <li v-for="contact in contacts">
+                      <a :href="contact.Link"><i :class="contact.Logo"></i><a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bot_card">
+                  <ul>
+                    <li>{{address}}</li>
+                    <li>{{telephone}}</li>
+                    <li>{{mail}}</li>
+                  </ul>
+                </div>
               </div>
               <div class="flip_card_back">
               </div>
             </div>
           </div>
         </div>
+        <div class="triangle1"></div>
+        <div class="triangle2"></div>
+        <div class="triangle3"></div>
+        <div class="triangle4"></div>
+        <div class="triangle5"></div>
+        <div class="triangle6"></div>
+        <div class="triangle7"></div>
+        <div class="triangle8"></div>
+        <div class="triangle9"></div>
+        <div class="triangle10"></div>
+        <div class="triangle11"></div>
+        <div class="black_triangle1"></div>
+        <div class="black_triangle2"></div>
+        <div class="black_triangle3"></div>
+        <div class="black_triangle4"></div>
+        <div class="black_triangle5"></div>
+        <div class="black_triangle6"></div>
+
       </div>
     </span>
-    <!-- <script src="js/app.js" charset="utf_8"></script> -->
+    <script src="js/myscript.js" charset="utf_8"></script>
   </body>
 </html>

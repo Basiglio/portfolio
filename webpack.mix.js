@@ -4,4 +4,4 @@ mix
 .sass('src/app.scss', 'css')
 .options({
     processCssUrls: false
-})
+});
