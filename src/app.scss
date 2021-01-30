@@ -186,14 +186,6 @@ footer {
 // /TRIANGLE DECORATION
 
 // MEDIA QUERY
-@media all and (max-width: 2556px) {
-  .triangle_right {
-    right: -7.8%;
-  }
-  .triangle_left {
-    right: -2.5%;
-  }
-}
 @media all and (max-width: 1920px) {
   .triangle_right {
     right: -7.8%;
@@ -353,9 +345,12 @@ footer {
   }
   .container_left {
     width: 100%;
-    .title_container {
-      height: 400px;
+    #title_container {
+      height: 300px;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       h2 {
         font-size: 30px;
       }
@@ -364,7 +359,7 @@ footer {
         display: none;
       }
     }
-    .card_container_top {
+    #card_container_top {
       height: 400px;
       flex-direction: column;
       align-items: center;
@@ -373,7 +368,7 @@ footer {
         width: 80%;
       }
     }
-    .card_container_bot {
+    #card_container_bot {
       height: 300px;
       .flip_card {
         width: 80%;
@@ -430,14 +425,76 @@ footer {
   }
 }
 @media all and (max-width: 375px)  {
+  .container_left {
+    width: 100%;
+    #title_container {
+      padding: 20px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+        display: none;
+      }
+    }
+    #card_container_top {
+      flex-direction: column;
+      align-items: center;
+      .flip_card {
+        width: 80%;
+      }
+    }
+    #card_container_bot {
+      height: 300px;
+      .flip_card {
+        width: 80%;
+      }
+    }
+  }
   .triangle_left {
-    right: -4.5%;
+    right: -4%;
   }
   .triangle_left_border_left {
     left: -4.5%;
   }
 }
 @media all and (max-width: 320px)  {
+  .container_left {
+    width: 100%;
+    #title_container {
+      padding: 20px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+        display: none;
+      }
+    }
+    #card_container_top {
+      flex-direction: column;
+      align-items: center;
+      .flip_card {
+        width: 80%;
+      }
+    }
+    #card_container_bot {
+      height: 300px;
+      .flip_card {
+        width: 80%;
+      }
+    }
+  }
   .triangle_left {
     right: -4.5%;
   }

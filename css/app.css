@@ -350,15 +350,6 @@ footer {
   z-index: 100000;
 }
 
-@media all and (max-width: 2556px) {
-  .triangle_right {
-    right: -7.8%;
-  }
-
-  .triangle_left {
-    right: -2.5%;
-  }
-}
 @media all and (max-width: 1920px) {
   .triangle_right {
     right: -7.8%;
@@ -520,30 +511,33 @@ footer {
   .container_left {
     width: 100%;
   }
-  .container_left .title_container {
-    height: 400px;
+  .container_left #title_container {
+    height: 300px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .container_left .title_container h2 {
+  .container_left #title_container h2 {
     font-size: 30px;
   }
-  .container_left .title_container p {
+  .container_left #title_container p {
     font-size: 15px;
     display: none;
   }
-  .container_left .card_container_top {
+  .container_left #card_container_top {
     height: 400px;
     flex-direction: column;
     align-items: center;
   }
-  .container_left .card_container_top .flip_card {
+  .container_left #card_container_top .flip_card {
     margin: 20px 0px;
     width: 80%;
   }
-  .container_left .card_container_bot {
+  .container_left #card_container_bot {
     height: 300px;
   }
-  .container_left .card_container_bot .flip_card {
+  .container_left #card_container_bot .flip_card {
     width: 80%;
   }
 
@@ -610,8 +604,40 @@ footer {
   }
 }
 @media all and (max-width: 375px) {
+  .container_left {
+    width: 100%;
+  }
+  .container_left #title_container {
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container_left #title_container h2 {
+    font-size: 30px;
+  }
+  .container_left #title_container p {
+    font-size: 15px;
+    display: none;
+  }
+  .container_left #card_container_top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container_left #card_container_top .flip_card {
+    width: 80%;
+  }
+  .container_left #card_container_bot {
+    height: 300px;
+  }
+  .container_left #card_container_bot .flip_card {
+    width: 80%;
+  }
+
   .triangle_left {
-    right: -4.5%;
+    right: -4%;
   }
 
   .triangle_left_border_left {
@@ -619,6 +645,38 @@ footer {
   }
 }
 @media all and (max-width: 320px) {
+  .container_left {
+    width: 100%;
+  }
+  .container_left #title_container {
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container_left #title_container h2 {
+    font-size: 30px;
+  }
+  .container_left #title_container p {
+    font-size: 15px;
+    display: none;
+  }
+  .container_left #card_container_top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container_left #card_container_top .flip_card {
+    width: 80%;
+  }
+  .container_left #card_container_bot {
+    height: 300px;
+  }
+  .container_left #card_container_bot .flip_card {
+    width: 80%;
+  }
+
   .triangle_left {
     right: -4.5%;
   }
